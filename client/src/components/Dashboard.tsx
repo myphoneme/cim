@@ -50,7 +50,7 @@ export default function Dashboard() {
       {/* Stats Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {stats.map((s, i) => (
-          <div key={i} className="bg-white dark:bg-[#111111] p-10 rounded-[2rem] shadow-sm border border-slate-200 dark:border-white/5 group hover:border-brand-500 transition-all duration-500">
+          <div key={i} className="bg-white dark:bg-brand-onyx p-10 rounded-4xl shadow-sm border border-slate-200 dark:border-white/5 group hover:border-brand-500 transition-all duration-500">
             <div className="flex items-center justify-between mb-8">
               <div className={`w-12 h-12 rounded-2xl bg-slate-100 dark:bg-white/5 flex items-center justify-center ${s.color}`}>
                 <i className={`fa-solid ${s.icon} text-xl`}></i>
@@ -65,7 +65,7 @@ export default function Dashboard() {
 
       {/* Charts */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-        <div className="bg-white dark:bg-[#111111] p-12 rounded-[2rem] border border-slate-200 dark:border-white/5">
+        <div className="bg-white dark:bg-brand-onyx p-12 rounded-4xl border border-slate-200 dark:border-white/5">
           <div className="flex items-center justify-between mb-12">
             <div>
               <h4 className="text-2xl font-black text-slate-900 dark:text-white tracking-tighter uppercase">Service Domain</h4>
@@ -75,7 +75,7 @@ export default function Dashboard() {
               <i className="fa-solid fa-chart-simple"></i>
             </div>
           </div>
-          <div className="h-[350px]">
+          <div className="h-87.5">
             <ResponsiveContainer width="100%" height="100%">
               <PieChart>
                 <Pie
@@ -101,7 +101,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        <div className="bg-white dark:bg-[#111111] p-12 rounded-[2rem] border border-slate-200 dark:border-white/5">
+        <div className="bg-white dark:bg-brand-onyx p-12 rounded-4xl border border-slate-200 dark:border-white/5">
           <div className="flex items-center justify-between mb-12">
             <div>
               <h4 className="text-2xl font-black text-slate-900 dark:text-white tracking-tighter uppercase">OEM Ecosystem</h4>
@@ -111,7 +111,7 @@ export default function Dashboard() {
               <i className="fa-solid fa-industry"></i>
             </div>
           </div>
-          <div className="h-[350px]">
+          <div className="h-87.5">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={barData} margin={{ left: 20 }}>
                 <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fontSize: 10, fontWeight: 900, fill: '#64748b' }} />
