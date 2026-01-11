@@ -1,0 +1,20 @@
+[Unit]
+Description=CIM FastAPI Application
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/home/project/cim/server
+Environment="PATH=/home/project/cim/server/venv/bin"
+ExecStart=/home/project/cim/server/venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8001
+Restart=always
+RestartSec=10
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=cim-api
+
+[Install]
+WantedBy=multi-user.target
