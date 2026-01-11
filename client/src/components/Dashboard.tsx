@@ -32,7 +32,7 @@ export default function Dashboard() {
       name: key,
       count: vendorCounts[key]
     }))
-    .sort((a, b) => b.count - a.count)
+    .sort((a, b) => (b.count ?? 0) - (a.count ?? 0))
     .slice(0, 8);
 
   // PhoneMe Brand Colors
